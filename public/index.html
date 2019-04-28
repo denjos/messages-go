@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="/api/login" method="post" id="formLogin">
+    <label for="email">Email</label>
+    <input type="email" id="email" placeholder="email">
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="password">
+    <button id="btnLogin">Login</button>
+</form>
+<div id="message-login"></div>
+<form action="/api/comments/" method="post" id="form-comment-add">
+    <label for="comment-content">Comment</label>
+    <textarea id="comment-content" placeholder="add a comment"></textarea>
+    <div id="comment-message"></div>
+    <button id="sendComment">SEND</button>
+</form>
+<div id="container">
+
+</div>
+
+<script src="js/util.js"></script>
+<script src="js/login.js"></script>
+<script src="js/comment.js"></script>
+</body>
+</html>

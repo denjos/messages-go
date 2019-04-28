@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>comments</h1>
+<div id="container">
+
+</div>
+<script type="text/javascript">
+    let url=`ws://${window.location.host}/ws`;
+    let ws=new WebSocket(url);
+    let container=document.getElementById("container");
+    ws.onmessage=function (msg) {
+        container.innerHTML=`<pre>${msg.data}</pre>`;
+        console.log(msg);
+    }
+</script>
+</body>
+</html>
